@@ -14,7 +14,7 @@ function Home() {
       <Layout>
 
         {/* horoSection  */}
-        <div className="">
+        <div >
           <HomeSection />
         </div>
 
@@ -38,7 +38,7 @@ function Home() {
         {/* AboutSection */}
 
 
-        <div>
+        <div className="overflow-hidden">
           <AboutSection />
         </div>
 

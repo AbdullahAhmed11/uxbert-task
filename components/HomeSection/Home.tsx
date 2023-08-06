@@ -12,15 +12,15 @@ function Home() {
 
     const SLIDER_DATA = [
         {
-            imgSrc: "./images/Home3.jpg",
+            imgSrc: "./images/home-one.jpg",
             slideTitle: "slide with the all new chair"
         },
         {
-            imgSrc: "./images/Home2.jpg",
+            imgSrc: "./images/home-two.jpg",
             slideTitle: "slide with the all new chair"
         },
         {
-            imgSrc: "./images/Home1.jpg",
+            imgSrc: "./images/home-three.jpg",
             slideTitle: "slide with the all new chair"
         },
     ]
