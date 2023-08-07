@@ -1,0 +1,80 @@
+[
+    {
+        "id": 1,
+        "name": " Smith Journal 14",
+        "price": 10.99,
+        "img": "images/cart1.jpg"
+    },
+    {
+        "id": 2,
+        "name": " Smith Journal 14",
+        "price": 1199,
+        "img": "images/cart2.jpg"
+    },
+    {
+        "id": 3,
+        "name": " Smith Journal 14",
+        "price": 1.05,
+        "img": "images/cart3.jpg"
+    },
+    {
+        "id": 4,
+        "name": " Smith Journal 14",
+        "price": 14000,
+        "img": "images/cart4.jpg"
+    },
+    {
+        "id": 5,
+        "name": " Smith Journal 14",
+        "price": 14000,
+        "img": "images/cart5.jpg"
+    },
+    {
+        "id": 6,
+        "name": " Smith Journal 14",
+        "price": 14000,
+        "img": "images/cart6.jpg"
+    },
+    {
+        "id": 7,
+        "name": " Smith Journal 14",
+        "price": 14000,
+        "img": "images/cart7.jpg"
+    },
+    {
+        "id": 8,
+        "name": " Smith Journal 14",
+        "price": 14000,
+        "img": "images/cart8.jpg"
+    },
+    {
+        "id": 9,
+        "name": " Smith Journal 14",
+        "price": 14000,
+        "img": "images/cart9.jpg"
+    },
+    {
+        "id": 10,
+        "name": " Smith Journal 14",
+        "price": 14000,
+        "img": "images/cart10.jpg"
+    },
+    {
+        "id": 11,
+        "name": " Smith Journal 14",
+        "price": 14000,
+        "img": "images/cart11.jpg"
+    },
+    {
+        "id": 12,
+        "name": " Smith Journal 14",
+        "price": 14000,
+        "img": "images/cart12.jpg"
+    },
+    {
+        "id": 13,
+        "name": " Smith Journal 14",
+        "price": 14000,
+        "img": "images/cart12.jpg"
+    }
+]

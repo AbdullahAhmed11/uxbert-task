@@ -4,6 +4,7 @@ import Image from "next/image";
 import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
 import MenuIcon from '@mui/icons-material/Menu';
 import { useShoppingCart } from "@/context/ShoppingCartContext";
+import Link from "next/link";
 
 function LayoutHeader() {
 
@@ -16,11 +17,11 @@ function LayoutHeader() {
         },
         {
             label: "Shop ALL",
-            href: "/",
+            href: "/shopAll",
         },
         {
             label: "Contact Us",
-            href: "/",
+            href: "/contact",
         },
     ]
     const { cartQuantity, openCart } = useShoppingCart()
@@ -50,7 +51,9 @@ function LayoutHeader() {
                         <div className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static gap-5 md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${open ? 'top-20 ' : 'top-[-490px]'}`}>
                             {
                                 NAV_LINKS.map((link) => (
-                                    <p key={link.href} className="font-bold text-white cursor-pointer md:ml-8  md:my-0 my-7 hover:text-hover-color">{link.label}</p>
+                                    <Link passHref target="_blank" href={link.href}>
+                                        <p key={link.href} className="font-bold text-white cursor-pointer md:ml-8  md:my-0 my-7 hover:text-hover-color">{link.label}</p>
+                                    </Link>
                                 ))
                             }
                         </div>
