@@ -29,12 +29,7 @@ function ShopAll() {
                             <div>
                                 <SideShop />
                             </div>
-                            <div className="col-span-3 ">
-                                {/* {
-                                    AllShop.map((card) => (
-                                        <MainShop {...card} key={card.id} />
-                                    ))
-                                } */}
+                            <div className="col-span-3 overflow-hidden">
                                 <MainShop />
                             </div>
                         </div>

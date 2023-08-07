@@ -65,7 +65,7 @@ function MainShop() {
                 }
 
             </div>
-            <div className='flex items-center gap-4 mt-20 justify-center mb-10 md:mb-0'>
+            <div className='flex items-center gap-1 md:gap-4 mt-20 justify-center mb-10 md:mb-0   '>
                 <div>
                     <button onClick={prePage} className=' bg-hover-color w-24  h-10 font-bold rounded  text-white'>prev</button>
                 </div>
