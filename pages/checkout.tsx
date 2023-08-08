@@ -5,7 +5,7 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { useShoppingCart } from "@/context/ShoppingCartContext";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper/MaxWidthWrapper";
 import CheckoutSection from "@/components/CheckOut/CheckoutSection";
-
+import StoreITems from "../data/allShop.json"
 function Checkout() {
 
     const {
@@ -51,9 +51,25 @@ function Checkout() {
 
                         {
                             cartItems.map(item => (
-                                <CheckoutSection key={item.id} {...item} />
+                                <>
+                                    <CheckoutSection key={item.id} {...item} />
+
+                                </>
                             ))
                         }
+
+                        <div className="flex gap-3 mt-3 mb-3">
+                            <h1 className="font-bold">Total: </h1>
+
+                            $
+                            {
+                                cartItems.reduce((total, ShoppingCart) => {
+                                    const item = StoreITems.find(i => i.id === ShoppingCart.id)
+                                    return total + (item?.price || 0) * ShoppingCart.quantity
+
+                                }, 0)
+                            }
+                        </div>
                     </MaxWidthWrapper>
                 </div>
             </Layout>
