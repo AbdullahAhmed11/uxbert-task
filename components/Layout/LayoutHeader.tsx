@@ -6,7 +6,10 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { useShoppingCart } from "@/context/ShoppingCartContext";
 import Link from "next/link";
 import CloseIcon from '@mui/icons-material/Close';
+import { useSession, signOut } from "next-auth/react"
+
 function LayoutHeader() {
+    const { data: session } = useSession()
 
     const [open, setOpen] = useState(false)
 
@@ -23,6 +26,7 @@ function LayoutHeader() {
             label: "Contact Us",
             href: "/contact",
         },
+
     ]
     const { cartQuantity, openCart } = useShoppingCart()
 
@@ -57,14 +61,29 @@ function LayoutHeader() {
                                 ))
                             }
                         </div>
-                        <div className="flex items-center">
-                            <div className="absolute top-3 md:right-28 right-10 bg-red rounded-full w-4 h-4 sm:w-5 sm:h-5 md:w-4 md:h-4 flex items-center justify-center text-white text-xs sm:text-sm md:text-base">
+                        <div className="flex items-center gap-4 " >
+                            <div className="absolute top-3 md:right-44 right-28 bg-red rounded-full w-4 h-4 sm:w-5 sm:h-5 md:w-4 md:h-4 flex items-center justify-center text-white text-xs sm:text-sm md:text-base">
                                 <p>{cartQuantity}</p>
                             </div>
                             <Link passHref href="/checkout">
                                 <ShoppingBagOutlinedIcon className="text-white" />
                             </Link>
+
+                            <div >
+                                <Link passHref href="/login">
+                                    {
+                                        session?.user?.email ? (
+
+                                            <h1 className="text-white">signOut</h1>
+                                        ) : (
+                                            <h1 className="text-white" onClick={() => signOut()}>signIn</h1>
+
+                                        )
+                                    }
+                                </Link>
+                            </div>
                         </div>
+
                     </div>
                 </MaxWidthWrapper>
             </div>
