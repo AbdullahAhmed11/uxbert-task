@@ -3,7 +3,7 @@
         "id": 1,
         "name": " Smith Journal 14",
         "price": 10.99,
-        "img": "images/cart1.jpg"
+        "img": "./images/cart-one.jpg"
     },
     {
         "id": 2,

@@ -1,5 +1,5 @@
 import Layout from "@/components/Layout/Layout"
-import React, { useEffect } from "react"
+import React from "react"
 import HomeSection from "@/components/HomeSection/Home"
 import Cart from "@/components/CartSection/Cart"
 import StoreItems from "../data/items.json"

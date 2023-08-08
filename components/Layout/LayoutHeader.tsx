@@ -5,7 +5,7 @@ import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
 import MenuIcon from '@mui/icons-material/Menu';
 import { useShoppingCart } from "@/context/ShoppingCartContext";
 import Link from "next/link";
-
+import CloseIcon from '@mui/icons-material/Close';
 function LayoutHeader() {
 
     const [open, setOpen] = useState(false)
@@ -28,7 +28,7 @@ function LayoutHeader() {
 
     return (
         <>
-            <div className="w-full md:h-14  bg-layout-color p-5 mb-15 fixed z-40">
+            <div className={`w-full md:h-14   bg-layout-color  p-5 mb-15 fixed z-40 ${open ? 'h-96 ' : 'h-14'} `}>
                 <MaxWidthWrapper>
                     <div className="flex items-center justify-between">
                         <div>
@@ -39,26 +39,26 @@ function LayoutHeader() {
                                 alt="logo"
                             />
                         </div>
-                        <div onClick={() => setOpen(!open)} className="text-white  md:hidden">
+                        <div onClick={() => setOpen(!open)} className="text-white  md:hidden ml-20">
                             {
                                 open ? (
-                                    <MenuIcon />
+                                    <CloseIcon />
                                 ) : (
-                                    <ShoppingBagOutlinedIcon />
+                                    <MenuIcon />
                                 )
                             }
                         </div>
                         <div className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static gap-5 md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${open ? 'top-20 ' : 'top-[-490px]'}`}>
                             {
                                 NAV_LINKS.map((link) => (
-                                    <Link passHref target="_blank" href={link.href}>
+                                    <Link passHref href={link.href}>
                                         <p key={link.href} className="font-bold text-white cursor-pointer md:ml-8  md:my-0 my-7 hover:text-hover-color">{link.label}</p>
                                     </Link>
                                 ))
                             }
                         </div>
                         <div className="flex items-center">
-                            <div className="absolute top-3 right-28 bg-red rounded-full w-4 h-4 sm:w-5 sm:h-5 md:w-4 md:h-4 flex items-center justify-center text-white text-xs sm:text-sm md:text-base">
+                            <div className="absolute top-3 md:right-28 right-10 bg-red rounded-full w-4 h-4 sm:w-5 sm:h-5 md:w-4 md:h-4 flex items-center justify-center text-white text-xs sm:text-sm md:text-base">
                                 <p>{cartQuantity}</p>
                             </div>
                             <Link passHref href="/checkout">

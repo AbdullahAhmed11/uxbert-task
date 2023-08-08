@@ -1,10 +1,8 @@
-import React, { useContext, useState } from "react";
-import StoreItems from "../../data/items.json"
+import React from "react";
 import { useShoppingCart } from "@/context/ShoppingCartContext";
 import MaxWidthWrapper from "../MaxWidthWrapper/MaxWidthWrapper";
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import Link from "next/link";
-import { useRouter } from "next/router";
 
 
 
@@ -18,13 +16,9 @@ type StoreItemProps = {
 
 
 function CartItem({ id, name, price, img }: StoreItemProps) {
-    const router = useRouter();
 
     const {
-        getItemQuantity,
         increaseCartQuantity,
-        decreaseCartQuantity,
-        removeFromCart,
     } = useShoppingCart()
 
 
@@ -33,7 +27,7 @@ function CartItem({ id, name, price, img }: StoreItemProps) {
         <>
             <MaxWidthWrapper>
 
-                <div className="mt-10 p-5 flex flex-col items-center gap-3 ">
+                <div className="mt-10 p-5 flex flex-col items-center gap-3  shadow-xl md:mb-10">
                     <div>
 
                         <img src={img} className="w-40 " />
@@ -43,7 +37,7 @@ function CartItem({ id, name, price, img }: StoreItemProps) {
                     </div>
                     <div className="flex items-center gap-3">
                         <p>${price}</p>
-                        <Link passHref href={`product/${id}`} target="_blank">
+                        <Link passHref href={`product/${id}`} >
                             <button className="hover:text-hover-color"><VisibilityIcon /></button>
                         </Link>
 

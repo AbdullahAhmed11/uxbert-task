@@ -1,12 +1,11 @@
-import React, { useState } from "react";
-import StoreItem from "../data/items.json"
+import React from "react";
 import Layout from "@/components/Layout/Layout";
 import Link from "next/link";
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import SideShop from "@/components/ShopAll/SideShop";
 import MainShop from "@/components/ShopAll/MainShop";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper/MaxWidthWrapper";
-import AllShop from "../data/allShop.json"
+
 function ShopAll() {
     return (
         <>

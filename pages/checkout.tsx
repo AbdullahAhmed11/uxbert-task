@@ -9,10 +9,6 @@ import CheckoutSection from "@/components/CheckOut/CheckoutSection";
 function Checkout() {
 
     const {
-        getItemQuantity,
-        increaseCartQuantity,
-        decreaseCartQuantity,
-        removeFromCart,
         cartQuantity,
         cartItems
     } = useShoppingCart()
