@@ -19,6 +19,13 @@ type ShoppingCartContext = {
     cartItems: CartItem[]
 }
 
+export type QuickPreview = {
+    id: number;
+    price: number;
+    image: string;
+    name: string;
+};
+
 const ShoppingCartContext = createContext({} as ShoppingCartContext)
 
 

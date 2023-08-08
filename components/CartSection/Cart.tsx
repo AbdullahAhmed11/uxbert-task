@@ -3,7 +3,8 @@ import StoreItems from "../../data/items.json"
 import { useShoppingCart } from "@/context/ShoppingCartContext";
 import MaxWidthWrapper from "../MaxWidthWrapper/MaxWidthWrapper";
 import VisibilityIcon from '@mui/icons-material/Visibility';
-import ModalSlide from "./Modal";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 
 
@@ -17,6 +18,7 @@ type StoreItemProps = {
 
 
 function CartItem({ id, name, price, img }: StoreItemProps) {
+    const router = useRouter();
 
     const {
         getItemQuantity,
@@ -41,7 +43,9 @@ function CartItem({ id, name, price, img }: StoreItemProps) {
                     </div>
                     <div className="flex items-center gap-3">
                         <p>${price}</p>
-                        <button className="hover:text-hover-color"><VisibilityIcon /></button>
+                        <Link passHref href={`product/${id}`} target="_blank">
+                            <button className="hover:text-hover-color"><VisibilityIcon /></button>
+                        </Link>
 
                     </div>
                     <div>
